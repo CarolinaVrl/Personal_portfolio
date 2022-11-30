@@ -558,7 +558,7 @@ hr{
    .all_services{
     justify-content: center;
     gap: 3rem;
-    overflow-x:none;
+    overflow-x:hidden;
    }
 
    .word_container{
