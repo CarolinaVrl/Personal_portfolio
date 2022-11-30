@@ -65,10 +65,9 @@ li{
 }
 .list_menu_item:hover{
     font-size: 18px;
-    
     cursor: pointer;
     color: var(--blueAqua);
-    box-shadow: -3px 17px 16px -7px #FFFFFF;
+    
 }
 .menu_container{ 
     display: flex;
@@ -319,7 +318,7 @@ hr{
     align-items: flex-start;
     align-content: center;
     width: 80%;
-    max-width: 500px;
+    max-width: 700px;
     
     
 }
@@ -357,7 +356,7 @@ hr{
     
 }
 .progreso:hover{
-    animation:repeat;
+    animation:repeat;   
 }
 .portafolio_main{
     display: flex;
@@ -370,15 +369,34 @@ hr{
     display: flex;
     gap: 1.5rem;
     height: 250px;
-    width: 70%;
-    overflow-x: scroll;
-    overflow-y: hidden;
-       
+    width: 100%;
+    overflow-x: hidden;
+    animation: moveexcersices 7s linear infinite;
+   
 }
 
-.exercises:hover{
+
+
+@keyframes moveexcersices {
+    to{transform: translatex(0);}
+    from{
+        transform: translateX(100%);
+    }
+    to{transform: translatex(100%);}
+    from{
+        transform: translateX(0);
+    }
+    
+}
+
+.excercises_container:hover{
+    animation-play-state: paused;
+}
+.exercises:hover {
     scale: 120%;
     cursor: pointer;
+    
+   
 }
 
 .exercises > img{
@@ -443,7 +461,16 @@ hr{
 
 .heart{
  color: var(--blueAqua);
+ animation: latidos 1.2s infinite;
+
 }
+@keyframes latidos {
+    to{transform: none; }
+    from {transform: scale(1.5);}
+    to{transform: none; }
+    
+}
+
 
 @media screen and ( min-width:576px ){
 
@@ -499,7 +526,6 @@ hr{
 
 @media screen and ( min-width:992px ){
 
- 
    
    .im{
     order: 0;
@@ -511,15 +537,18 @@ hr{
    }
    h1{
     order: 2;
+    font-size: 80px;
     
    }
    .profession{
     order: 3;
     margin: 0;
-    width: 150px;
+    width: 180px;
+    font-size: 22px;
    }
    .time{
     order: 4;
+    font-size: 22px;
    }
 
    .social_container{
@@ -529,18 +558,29 @@ hr{
    .all_services{
     justify-content: center;
     gap: 3rem;
+    overflow-x:none;
    }
 
    .word_container{
-    height: 80px;
+    height: 100px;
     justify-content: space-evenly;
    }
  
    .my_person{
     display: flex;
     flex-direction: row-reverse;
-    
-    
+               
+   }
+   .photo{
+    height: 700px;
+    width: 700px;
+
+   }
+   .photo > img{
+    height: 380px;
+    width: 331px;
+    top: 40px;
+    right: 54px;
    }
    .about_me{
     order: 1;
